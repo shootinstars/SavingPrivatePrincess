@@ -6,13 +6,13 @@ public class ScenesFader : MonoBehaviour
 
     public Animator animator;
     public bool fading;
-    public bool start_timer;
+    public bool startTimer;
     float timer = 25f;
     int indexToLoad;
     // Update is called once per frame
     void Update()
     {
-        if (start_timer && fading && timer > 0) {
+        if (startTimer && fading && timer > 0) {
             timer -= Time.deltaTime;
             if (timer <= 0) {
             FadeToLevel(0);

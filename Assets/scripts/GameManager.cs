@@ -150,7 +150,7 @@ public class GameManager : MonoBehaviour
     }
 
 
-    public void ChangeTextColor(TMP_Text txt_1, TMP_Text UI_1, TMP_Text txt_2, TMP_Text UI_2, Color color)
+    public void ChangeTextColor(Color color)
     {  
         livesText.color = color;
         livesUI.color = color;
@@ -267,6 +267,6 @@ public class GameManager : MonoBehaviour
         ground.SetActive(false);
         end.SetActive(true);
         bg4.SetActive(false);
-        bg.GetComponent<ScenesFader>().start_timer = true;
+        bg.GetComponent<ScenesFader>().startTimer = true;
     }
 }

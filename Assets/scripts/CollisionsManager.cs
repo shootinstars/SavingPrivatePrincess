@@ -17,7 +17,7 @@ public class CollisionsManager : MonoBehaviour
     TMP_Text scoreUI;
     TMP_Text scoreText;
     GameObject village;
-    GameObject forrest;
+    GameObject forest;
     GameObject cave;
     GameObject castle;
     int sceneIndex;
@@ -34,7 +34,7 @@ public class CollisionsManager : MonoBehaviour
         scoreText = game_manager.scoreText;
         scoreUI = game_manager.scoreUI;
         village = game_manager.bg1;
-        forrest = game_manager.bg2;
+        forest = game_manager.bg2;
         cave = game_manager.bg3;
         castle = game_manager.bg4;
         
@@ -45,14 +45,14 @@ public class CollisionsManager : MonoBehaviour
                 village.SetActive(true);
                 break;
 
-                case "forrest":
-                forrest.SetActive(true);
-                game_manager.ChangeTextColor(livesText, livesUI, scoreText, scoreUI, Color.white);
+                case "forest":
+                forest.SetActive(true);
+                game_manager.ChangeTextColor(Color.white);
                 break;
 
                 case "cave":
                 cave.SetActive(true);
-                game_manager.ChangeTextColor(livesText, livesUI, scoreText, scoreUI, Color.white);
+                game_manager.ChangeTextColor(Color.white);
                 break;
 
                 case "castle":
@@ -86,13 +86,13 @@ public class CollisionsManager : MonoBehaviour
             score += 1;
             scoreText.text = score.ToString();
             if (sceneIndex == 1 && score == 5) {
-                game_manager.ChangeBackground(village,forrest);
-                game_manager.ChangeTextColor(livesText, livesUI, scoreText, scoreUI, Color.white);
+                game_manager.ChangeBackground(village,forest);
+                game_manager.ChangeTextColor(Color.white);
             } else if (sceneIndex == 1 && score == 10) {
-                game_manager.ChangeBackground(forrest,cave);
+                game_manager.ChangeBackground(forest,cave);
             } else if (sceneIndex == 1 && score == 15) {
                 game_manager.ChangeBackground(cave,castle);
-                game_manager.ChangeTextColor(livesText, livesUI, scoreText, scoreUI, Color.black);
+                game_manager.ChangeTextColor(Color.black);
             } else if(sceneIndex == 1 && score == 20) {
                 game_manager.LastRun();
             }

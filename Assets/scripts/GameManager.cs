@@ -177,7 +177,7 @@ public class GameManager : MonoBehaviour
 
     void SetFade(string name)
     {
-        GameObject.Find(name).GetComponent<FadeIn>().fade_img = true;
+        GameObject.Find(name).GetComponent<FadeIn>().fadeImg = true;
     }
     void FadeIn()
     {

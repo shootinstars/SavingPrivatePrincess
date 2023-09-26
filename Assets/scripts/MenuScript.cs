@@ -90,10 +90,10 @@ public class MenuScript : MonoBehaviour
         Screen.SetResolution(resolution.width, resolution.height, true);
     }
 
-    void SwitchUI(GameObject ui_1, GameObject ui_2)
+    void SwitchUI(GameObject ui1, GameObject ui2)
     {
-        ui_1.SetActive(false);
-        ui_2.SetActive(true);
+        ui1.SetActive(false);
+        ui2.SetActive(true);
     }
 
     public void ShowSettings()

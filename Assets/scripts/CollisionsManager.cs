@@ -9,7 +9,7 @@ public class CollisionsManager : MonoBehaviour
 {
     public Rigidbody2D rb;
     private Vector2 land = new Vector2(0, 0);
-    GameManager game_manager;
+    GameManager gameManager;
     int lives;
     int score;
     TMP_Text livesText;
@@ -26,17 +26,17 @@ public class CollisionsManager : MonoBehaviour
     void Start()
     {
         sceneIndex = SceneManager.GetActiveScene().buildIndex;
-        game_manager = GameObject.Find("GameManager").GetComponent<GameManager>();
-        lives = game_manager.lives;
-        score = game_manager.score;
-        livesText = game_manager.livesText;
-        livesUI = game_manager.livesUI;
-        scoreText = game_manager.scoreText;
-        scoreUI = game_manager.scoreUI;
-        village = game_manager.bg1;
-        forest = game_manager.bg2;
-        cave = game_manager.bg3;
-        castle = game_manager.bg4;
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        lives = gameManager.lives;
+        score = gameManager.score;
+        livesText = gameManager.livesText;
+        livesUI = gameManager.livesUI;
+        scoreText = gameManager.scoreText;
+        scoreUI = gameManager.scoreUI;
+        village = gameManager.bg1;
+        forest = gameManager.bg2;
+        cave = gameManager.bg3;
+        castle = gameManager.bg4;
         
         if (sceneIndex == 2) {
             string bgName = PlayerPrefs.GetString("bgName");
@@ -47,12 +47,12 @@ public class CollisionsManager : MonoBehaviour
 
                 case "forest":
                 forest.SetActive(true);
-                game_manager.ChangeTextColor(Color.white);
+                gameManager.ChangeTextColor(Color.white);
                 break;
 
                 case "cave":
                 cave.SetActive(true);
-                game_manager.ChangeTextColor(Color.white);
+                gameManager.ChangeTextColor(Color.white);
                 break;
 
                 case "castle":
@@ -78,26 +78,26 @@ public class CollisionsManager : MonoBehaviour
                 lives -= 1;
                 livesText.text = lives.ToString();
                 if (lives == 0){
-                    game_manager.score = score;
-                    game_manager.GameOver();
+                    gameManager.score = score;
+                    gameManager.GameOver();
                 }
         } else if (collision.gameObject.tag == "ring") {
             Destroy(collision.gameObject);
             score += 1;
             scoreText.text = score.ToString();
             if (sceneIndex == 1 && score == 5) {
-                game_manager.ChangeBackground(village,forest);
-                game_manager.ChangeTextColor(Color.white);
+                gameManager.ChangeBackground(village,forest);
+                gameManager.ChangeTextColor(Color.white);
             } else if (sceneIndex == 1 && score == 10) {
-                game_manager.ChangeBackground(forest,cave);
+                gameManager.ChangeBackground(forest,cave);
             } else if (sceneIndex == 1 && score == 15) {
-                game_manager.ChangeBackground(cave,castle);
-                game_manager.ChangeTextColor(Color.black);
+                gameManager.ChangeBackground(cave,castle);
+                gameManager.ChangeTextColor(Color.black);
             } else if(sceneIndex == 1 && score == 20) {
-                game_manager.LastRun();
+                gameManager.LastRun();
             }
         } else if(collision.gameObject.tag == "princess") {
-            game_manager.EndGame();
+            gameManager.EndGame();
             Destroy(gameObject);
         }
     }

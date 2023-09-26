@@ -76,7 +76,7 @@ public class ScoreManager : MonoBehaviour
                         break;
                 }
                 resultText.text = $"Wow, that was  good enough for {i + 1}{suffix}";
-                positionInfo.GetComponent<FadeIn>().fade_img = true;
+                positionInfo.GetComponent<FadeIn>().fadeImg = true;
                 return;
             }
 

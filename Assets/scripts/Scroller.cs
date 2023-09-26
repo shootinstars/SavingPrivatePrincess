@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Scroller : MonoBehaviour
 {
-    [SerializeField] public RawImage _img;
+    [SerializeField] public RawImage img;
     [SerializeField] public float x;
     private float y;
 
@@ -17,6 +17,6 @@ public class Scroller : MonoBehaviour
 
     void Update()
     {
-        _img.uvRect = new Rect(_img.uvRect.position + new Vector2(x,y) * Time.deltaTime, _img.uvRect.size);
+        img.uvRect = new Rect(img.uvRect.position + new Vector2(x,y) * Time.deltaTime, img.uvRect.size);
     }
 }

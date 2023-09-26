@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class FadeOut : MonoBehaviour
 {
-    public bool fade_out = false;
-    public bool timer_running = false;
+    public bool fadeOut = false;
+    public bool timerRunning = false;
     public GameObject Credits;
     float timer = 2f;
     public CanvasGroup element;
@@ -15,13 +15,13 @@ public class FadeOut : MonoBehaviour
     void Update()
     {
         if (element.alpha >= 1) {
-            timer_running = true;
+            timerRunning = true;
         }
-        if (timer_running) {
+        if (timerRunning) {
             timer -= Time.deltaTime;
             if (timer <= 0) {
-                timer_running = false;
-                fade_out = true;
+                timerRunning = false;
+                fadeOut = true;
                 if (Credits != null) {
                     Credits.SetActive(true);
                 }
@@ -32,7 +32,7 @@ public class FadeOut : MonoBehaviour
 
     void FadingOut() 
     {
-        if (fade_out && element.alpha > 0)
+        if (fadeOut && element.alpha > 0)
         {
             element.alpha -= Time.deltaTime;
         }

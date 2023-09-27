@@ -2201,7 +2201,7 @@ GameObject:
   - component: {fileID: 497702550}
   - component: {fileID: 497702549}
   m_Layer: 0
-  m_Name: BgForrest
+  m_Name: forest
   m_TagString: background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2380,7 +2380,7 @@ GameObject:
   - component: {fileID: 532192933}
   - component: {fileID: 532192932}
   m_Layer: 0
-  m_Name: BgCave
+  m_Name: cave
   m_TagString: background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3638,7 +3638,7 @@ GameObject:
   - component: {fileID: 1098984775}
   - component: {fileID: 1098984774}
   m_Layer: 0
-  m_Name: BgCastle
+  m_Name: castle
   m_TagString: background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6601,7 +6601,7 @@ GameObject:
   - component: {fileID: 1970218706}
   - component: {fileID: 1970218705}
   m_Layer: 0
-  m_Name: BgVillage
+  m_Name: village
   m_TagString: background
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

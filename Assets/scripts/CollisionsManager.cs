@@ -43,7 +43,6 @@ public class CollisionsManager : MonoBehaviour
         
         if (sceneIndex == 2) {
             string bgName = PlayerPrefs.GetString("bgName");
-            
             switch (bgName) {
                 case "village":
                 village.SetActive(true);
@@ -63,6 +62,7 @@ public class CollisionsManager : MonoBehaviour
                 castle.SetActive(true);
                 break;
             }
+            gameManager.ChangeGroundColor(bgName);
         }
     }
 
@@ -97,6 +97,7 @@ public class CollisionsManager : MonoBehaviour
                 gameManager.ChangeTextColor(Color.white);
             } else if (sceneIndex == 1 && score == 10) {
                 gameManager.ChangeBackground(forest,cave);
+                gameManager.ChangeGroundColor("cave");
             } else if (sceneIndex == 1 && score == 15) {
                 gameManager.ChangeBackground(cave,castle);
                 gameManager.ChangeTextColor(Color.black);

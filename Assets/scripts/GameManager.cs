@@ -60,7 +60,6 @@ public class GameManager : MonoBehaviour
         rb = GameObject.FindGameObjectWithTag("player").GetComponent<Rigidbody2D>();
         livesText.text = lives.ToString();
         scoreText.text = score.ToString();
-        ChangeGroundColor();
     }
     
 
@@ -105,10 +104,8 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void ChangeGroundColor()
+   public void ChangeGroundColor(string bgName)
     {
-        string bgName = PlayerPrefs.GetString("bgName");
-        Debug.Log(bgName);
         if (bgName == "village" || bgName == "forest") {
             newColor = new Color(
                 185.0f / 255.0f,
@@ -118,9 +115,7 @@ public class GameManager : MonoBehaviour
         } else {
             newColor = new Color(255, 255, 255);
         }
-        Debug.Log(newColor);
         for (int i = 0; i < groundList.Count; i++) {
-            Debug.Log(i);
             groundList[i].GetComponent<SpriteRenderer>().color = newColor;
         }
     }
@@ -272,7 +267,7 @@ public class GameManager : MonoBehaviour
 
     public void LastRun()
     {
-        GameObject.Find("BgCastle").GetComponent<Scroller>().x = 0;
+        GameObject.Find("castle").GetComponent<Scroller>().x = 0;
         rb.gravityScale = 3;
         rb.velocity = new Vector2(12f, 0);
         rb.freezeRotation = false;

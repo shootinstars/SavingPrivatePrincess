@@ -11,7 +11,7 @@ public class Scroller : MonoBehaviour
 
     void Awake()
     {
-        x = 0.3f;
+        x = 0.32f;
         y = 0f;
     }
 

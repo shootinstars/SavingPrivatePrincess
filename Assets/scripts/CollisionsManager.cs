@@ -8,6 +8,9 @@ using TMPro;
 public class CollisionsManager : MonoBehaviour
 {
     public Rigidbody2D rb;
+
+    public AudioSource collectSound;
+    public AudioSource hitSound;
     private Vector2 land = new Vector2(0, 0);
     GameManager gameManager;
     int lives;
@@ -40,6 +43,7 @@ public class CollisionsManager : MonoBehaviour
         
         if (sceneIndex == 2) {
             string bgName = PlayerPrefs.GetString("bgName");
+            
             switch (bgName) {
                 case "village":
                 village.SetActive(true);
@@ -70,11 +74,13 @@ public class CollisionsManager : MonoBehaviour
         }
     }
 
+
     public void OnCollisionEnter2D(Collision2D collision)
     {
         Jump();
         if (collision.gameObject.tag == "rock") {
                 Destroy(collision.gameObject);
+                hitSound.Play();
                 lives -= 1;
                 livesText.text = lives.ToString();
                 if (lives == 0){
@@ -83,6 +89,7 @@ public class CollisionsManager : MonoBehaviour
                 }
         } else if (collision.gameObject.tag == "ring") {
             Destroy(collision.gameObject);
+            collectSound.Play();
             score += 1;
             scoreText.text = score.ToString();
             if (sceneIndex == 1 && score == 5) {

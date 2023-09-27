@@ -20,7 +20,6 @@ public class GameManager : MonoBehaviour
     public ScoreManager scoreManager;
 
     public TMP_InputField inputField;
-
     public TMP_Text livesText;
     public TMP_Text livesUI;
     public TMP_Text scoreUI;
@@ -43,6 +42,8 @@ public class GameManager : MonoBehaviour
     public GameObject end;
     public GameObject pauseScreen;
     public GameObject submitScoreScreen;
+    public List<GameObject> groundList;
+    Color newColor;
 
     public Slider volumeSlider;
 
@@ -59,6 +60,7 @@ public class GameManager : MonoBehaviour
         rb = GameObject.FindGameObjectWithTag("player").GetComponent<Rigidbody2D>();
         livesText.text = lives.ToString();
         scoreText.text = score.ToString();
+        ChangeGroundColor();
     }
     
 
@@ -100,6 +102,26 @@ public class GameManager : MonoBehaviour
             } else {
                 Resume();
             }
+        }
+    }
+
+    private void ChangeGroundColor()
+    {
+        string bgName = PlayerPrefs.GetString("bgName");
+        Debug.Log(bgName);
+        if (bgName == "village" || bgName == "forest") {
+            newColor = new Color(
+                185.0f / 255.0f,
+                139.0f / 255.0f,
+                90.0f / 255.0f
+                );
+        } else {
+            newColor = new Color(255, 255, 255);
+        }
+        Debug.Log(newColor);
+        for (int i = 0; i < groundList.Count; i++) {
+            Debug.Log(i);
+            groundList[i].GetComponent<SpriteRenderer>().color = newColor;
         }
     }
 

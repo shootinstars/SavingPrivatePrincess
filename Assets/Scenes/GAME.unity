@@ -220,14 +220,14 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 625447528}
   - {fileID: 209452837}
   - {fileID: 1798878923}
   - {fileID: 804811077}
   - {fileID: 339164933}
   - {fileID: 1854209657}
-  - {fileID: 1275277905}
   - {fileID: 1755256431}
+  - {fileID: 625447528}
+  - {fileID: 1275277905}
   - {fileID: 1639857153}
   - {fileID: 2047471408}
   m_Father: {fileID: 0}
@@ -2286,7 +2286,7 @@ Transform:
   m_GameObject: {fileID: 597399599}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 930, y: -421, z: 3.656842}
+  m_LocalPosition: {x: 932.3, y: -415.1, z: 3.656842}
   m_LocalScale: {x: 10.334568, y: 10.334568, z: 10.334568}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2403,9 +2403,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.15577263, y: -0.46730697}
+  m_Offset: {x: 0.15577236, y: -0.18018916}
   serializedVersion: 2
-  m_Radius: 8.682326
+  m_Radius: 8.395208
 --- !u!1 &625447527
 GameObject:
   m_ObjectHideFlags: 0
@@ -3322,9 +3322,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'HAPPY ENDING
+  m_text: 'YOU REACHED THE CHAMBER
 
-    THE QUEEN IS SAFE'
+    AND SAVED THE QUEEN'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5802dc9cfdf91f8498815b6be43cc4dc, type: 2}
   m_sharedMaterial: {fileID: 670597086342668003, guid: 5802dc9cfdf91f8498815b6be43cc4dc, type: 2}
@@ -3390,7 +3390,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &843899413
@@ -5060,14 +5060,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Music
-
-
-
-    Derek Fiechter
-
-
-    Brandon Fiechter'
+  m_text: "Music: \n\nAll rights belong to:\n\n\nDerek Fiechter\n\nBrandon Fiechter"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5802dc9cfdf91f8498815b6be43cc4dc, type: 2}
   m_sharedMaterial: {fileID: 670597086342668003, guid: 5802dc9cfdf91f8498815b6be43cc4dc, type: 2}

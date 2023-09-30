@@ -27,7 +27,7 @@ public class MenuScript : MonoBehaviour
     public GameObject tutorialInfo;
     public GameObject leaderboard;
     public GameObject leaderboardBack;
-
+    public GameObject blackFader;
     private double currentRefreshRate;
     private int currentResolutionIndex = 0;
 
@@ -36,7 +36,7 @@ public class MenuScript : MonoBehaviour
         GetTutorialInfo();
         menuTheme = GameObject.Find("MainTheme").GetComponent<AudioSource>();
         LoadVolume();
-        resolutions = Screen.resolutions;
+        /*resolutions = Screen.resolutions;
         filteredResolutions = new List<Resolution>();
         currentRefreshRate = Screen.currentResolution.refreshRateRatio.value;
 
@@ -59,6 +59,7 @@ public class MenuScript : MonoBehaviour
         resolutionDropdown.AddOptions(options);
         resolutionDropdown.value = currentResolutionIndex;
         resolutionDropdown.RefreshShownValue();
+        */
     }
 
     void Update() 
@@ -77,7 +78,7 @@ public class MenuScript : MonoBehaviour
         }
     }
 
-    bool CheckResolution(int width, int height) 
+   /* bool CheckResolution(int width, int height) 
     {
         var allowedResolutions = new HashSet<(int width, int height)>() {(1280, 720), (1280, 768),
                                                                 (1360, 768), (1366, 768),
@@ -89,6 +90,7 @@ public class MenuScript : MonoBehaviour
         Resolution resolution = filteredResolutions[resolutionIndex];
         Screen.SetResolution(resolution.width, resolution.height, true);
     }
+    */
 
     void SwitchUI(GameObject ui1, GameObject ui2)
     {
@@ -187,6 +189,7 @@ public class MenuScript : MonoBehaviour
     {
         int TutorialComplete = PlayerPrefs.GetInt("TutorialComplete");
         if (TutorialComplete == 1) {
+            blackFader.SetActive(true);
             endlessMode.GetComponent<Button>().interactable = true;
             endlessModeText.GetComponent<TMP_Text>().color = Color.black;
             var image = endlessMode.GetComponent<Image>();

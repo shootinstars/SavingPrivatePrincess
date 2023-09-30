@@ -2171,7 +2171,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 359.66, y: 104.1}
+  m_AnchoredPosition: {x: 355.06, y: 195.99673}
   m_SizeDelta: {x: 319.5, y: 35.55}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &710185524
@@ -2267,7 +2267,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &729310744
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2491,7 +2491,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1595510128}
         m_TargetAssemblyTypeName: MenuScript, Assembly-CSharp
-        m_MethodName: HideMapChooser
+        m_MethodName: HidemapChooser
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3415,6 +3415,8 @@ GameObject:
   - component: {fileID: 864192002}
   - component: {fileID: 864192001}
   - component: {fileID: 864192003}
+  - component: {fileID: 864192005}
+  - component: {fileID: 864192004}
   m_Layer: 5
   m_Name: BlackFader
   m_TagString: Untagged
@@ -3492,6 +3494,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endlessModeText: {fileID: 1143010519}
+--- !u!225 &864192004
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 864191999}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &864192005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 864191999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c16aa0485724d9d49abc92342101e060, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeOut: 1
+  timerRunning: 0
+  Credits: {fileID: 0}
+  element: {fileID: 864192004}
 --- !u!1 &874986923
 GameObject:
   m_ObjectHideFlags: 0
@@ -4240,8 +4270,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4287401100
+  m_fontColor: {r: 0.5471698, g: 0.5471698, b: 0.5471698, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -5418,8 +5448,6 @@ GameObject:
   - component: {fileID: 1472681046}
   - component: {fileID: 1472681045}
   - component: {fileID: 1472681044}
-  - component: {fileID: 1472681047}
-  - component: {fileID: 1472681048}
   m_Layer: 5
   m_Name: EndlessModeButton
   m_TagString: Untagged
@@ -5541,32 +5569,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1472681042}
   m_CullTransparentMesh: 1
---- !u!225 &1472681047
-CanvasGroup:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1472681042}
-  m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
-  m_IgnoreParentGroups: 0
---- !u!114 &1472681048
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1472681042}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41e92e2433eb95c49ac4c5b8cd33a480, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fadeImg: 1
-  element: {fileID: 1472681047}
 --- !u!1 &1509587869
 GameObject:
   m_ObjectHideFlags: 0
@@ -5833,7 +5835,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1550100507
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6141,6 +6143,7 @@ MonoBehaviour:
   tutorialInfo: {fileID: 334873814}
   leaderboard: {fileID: 1053757812}
   leaderboardBack: {fileID: 1624584202}
+  blackFader: {fileID: 864191999}
 --- !u!1 &1624584202
 GameObject:
   m_ObjectHideFlags: 0
@@ -6783,7 +6786,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 108.60001, y: 104.10327}
+  m_AnchoredPosition: {x: 104, y: 196}
   m_SizeDelta: {x: 182.62, y: 45.65}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1818265831
@@ -7836,7 +7839,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'The princess has been kidnaped!
+  m_text: 'The princess has been kidnapped!
 
     Now you have to go through the kingdom
     and collect enough rings to save her!'

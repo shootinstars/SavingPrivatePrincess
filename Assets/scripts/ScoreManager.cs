@@ -57,7 +57,6 @@ public class ScoreManager : MonoBehaviour
         PlayerPrefs.SetFloat("id", id + 1);
         var scores = GetHighScores().ToArray();
         for (int i = 0; i < scores.Length; i++) {
-            Debug.Log(id);
             if (scores[i].id == newScore.id) {
                 string suffix;
                 switch((i + 1) % 10) 

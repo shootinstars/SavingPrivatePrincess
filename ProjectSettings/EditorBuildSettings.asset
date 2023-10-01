@@ -11,9 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GAME.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 0
-    path: Assets/Scenes/ENDLESS_COPY.unity
-    guid: b8a2f55ca4254ee498c9c738095e8916
   - enabled: 1
     path: Assets/Scenes/ENDLESS.unity
     guid: 10c21623b88816b4aa53b0f0a486178c

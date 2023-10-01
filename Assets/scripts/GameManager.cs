@@ -244,6 +244,9 @@ public class GameManager : MonoBehaviour
                                                  'h', 'i', 'j', 'k', 'l', 'm', 'n',
                                                  'o', 'p', 'q', 'r', 's', 't', 'u',
                                                  'v', 'w', 'x', 'y', 'z'};
+        if (name == "") {
+            return;
+        }
         for (int i = 0; i < name.Length; i++) {
             if (!alphSet.Contains(char.ToLower(name[i]))) {
                 return;

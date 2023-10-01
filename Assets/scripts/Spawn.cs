@@ -32,7 +32,7 @@ public class Spawn : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(Random.Range(0.6f, 1.9f));
+            yield return new WaitForSeconds(Random.Range(0.7f, 1.9f));
             spawnRock();
         }
     }

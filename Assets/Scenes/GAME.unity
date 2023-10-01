@@ -679,7 +679,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   img: {fileID: 339164935}
-  x: 0.35
+  x: 0.28
 --- !u!114 &339164935
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3142,7 +3142,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   img: {fileID: 804811079}
-  x: 0.35
+  x: 0.28
 --- !u!114 &804811079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5738,7 +5738,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   img: {fileID: 1798878925}
-  x: 0.3
+  x: 0.28
 --- !u!114 &1798878925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6044,7 +6044,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   img: {fileID: 1854209659}
-  x: 0.35
+  x: 0.28
 --- !u!114 &1854209659
 MonoBehaviour:
   m_ObjectHideFlags: 0

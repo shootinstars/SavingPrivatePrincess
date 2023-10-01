@@ -8,12 +8,12 @@ using UnityEngine.UI;
 public class MenuScript : MonoBehaviour
 {
 
-    [SerializeField] private TMP_Dropdown resolutionDropdown;
+    //[SerializeField] private TMP_Dropdown resolutionDropdown;
     [SerializeField] Slider volumeSlider;
     AudioSource menuTheme;
 
-    private Resolution[] resolutions;
-    private List<Resolution> filteredResolutions;
+   //private Resolution[] resolutions;
+    //private List<Resolution> filteredResolutions;
 
 
     public GameObject mainMenu;
@@ -28,8 +28,8 @@ public class MenuScript : MonoBehaviour
     public GameObject leaderboard;
     public GameObject leaderboardBack;
     public GameObject blackFader;
-    private double currentRefreshRate;
-    private int currentResolutionIndex = 0;
+    //private double currentRefreshRate;
+    //private int currentResolutionIndex = 0;
 
     void Start()
     {
